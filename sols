@@ -1,0 +1,127 @@
+local objects = game:GetService("Workspace").DroppedItems
+
+local PathfindingService = game:GetService("PathfindingService")
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:FindFirstChildOfClass("Humanoid")
+
+local startPoint = character.HumanoidRootPart.Position
+local endPoint = Vector3.new(173.699936, 123.251984, 93.584053)
+
+local path = PathfindingService:CreatePath({
+    AgentRadius = 2,
+    AgentHeight = 5,
+    AgentCanJump = true,
+    AgentJumpHeight = 7,
+})
+
+path:ComputeAsync(startPoint, endPoint)
+
+local function followPath()
+    local waypoints = path:GetWaypoints()
+    for _, waypoint in ipairs(waypoints) do
+        humanoid:MoveTo(waypoint.Position)
+        if waypoint.Action == Enum.PathWaypointAction.Jump then
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        end
+        humanoid.MoveToFinished:Wait()
+    end
+end
+
+followPath()
+for i, v in pairs(workspace:GetDescendants()) do
+    if v:IsA('ProximityPrompt') then
+    v.RequiresLineOfSight = false
+end
+for i = 1, 6 do
+    keypress(0x46)
+    wait(0.1)
+end
+wait(0.9)
+
+local objects = game:GetService("Workspace").DroppedItems
+
+local PathfindingService = game:GetService("PathfindingService")
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:FindFirstChildOfClass("Humanoid")
+
+local startPoint = character.HumanoidRootPart.Position
+local endPoint = Vector3.new(192.531, 122.252, 77.2863)
+
+local path = PathfindingService:CreatePath({
+    AgentRadius = 2,
+    AgentHeight = 5,
+    AgentCanJump = true,
+    AgentJumpHeight = 7,
+})
+
+path:ComputeAsync(startPoint, endPoint)
+
+local function followPath()
+    local waypoints = path:GetWaypoints()
+    for _, waypoint in ipairs(waypoints) do
+        humanoid:MoveTo(waypoint.Position)
+        if waypoint.Action == Enum.PathWaypointAction.Jump then
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        end
+        humanoid.MoveToFinished:Wait()
+    end
+end
+
+followPath()
+for i, v in pairs(workspace:GetDescendants()) do
+    if v:IsA('ProximityPrompt') then
+    v.RequiresLineOfSight = false
+end
+for i = 1, 6 do
+    keypress(0x46)
+    wait(0.1)
+end
+wait(0.9)
+local objects = game:GetService("Workspace").DroppedItems
+
+local PathfindingService = game:GetService("PathfindingService")
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:FindFirstChildOfClass("Humanoid")
+
+local startPoint = character.HumanoidRootPart.Position
+local endPoint = Vector3.new(167.355, 105.252, -7.90505)
+
+local path = PathfindingService:CreatePath({
+    AgentRadius = 2,
+    AgentHeight = 5,
+    AgentCanJump = true,
+    AgentJumpHeight = 7,
+})
+
+path:ComputeAsync(startPoint, endPoint)
+
+local function followPath()
+    local waypoints = path:GetWaypoints()
+    for _, waypoint in ipairs(waypoints) do
+        humanoid:MoveTo(waypoint.Position)
+        if waypoint.Action == Enum.PathWaypointAction.Jump then
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        end
+        humanoid.MoveToFinished:Wait()
+    end
+end
+
+followPath()
+for i, v in pairs(workspace:GetDescendants()) do
+    if v:IsA('ProximityPrompt') then
+    v.RequiresLineOfSight = false
+end
+for i = 1, 6 do
+    keypress(0x46)
+    wait(0.1)
+end
+wait(0.9)
