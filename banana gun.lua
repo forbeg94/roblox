@@ -1,5 +1,6 @@
 local tool = game:GetObjects('rbxassetid://13035202991')[1]
 tool.Parent = game.Players.LocalPlayer.Backpack
+tool.TextureId = 'rbxassetid://8453926559'
 local humanoid = game.Players.LocalPlayer.Character.Humanoid
 local cam = game.Workspace.CurrentCamera
 local head = game.Players.LocalPlayer.Character.Head
