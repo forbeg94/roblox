@@ -33,7 +33,9 @@ tool.Activated:Connect(function()
     end
     if #allbananas > 0 then
         local targ = allbananas[math.random(0, #allbananas)]
+	if targ.TouchInterest then
         targ.TouchInterest:Destroy()
+	end
         targ.Position = head.Position + cam.CFrame.LookVector * 5
         targ.AssemblyLinearVelocity = cam.CFrame.LookVector * 200
     end
